@@ -1,9 +1,19 @@
-# PS4 Exploit Host
-Firmwares: `5.05` `6.72` `7.XX` `8.XX` `9.XX` `10.XX` `11.XX` `12.XX` `13.XX`
 
-## Steps:
+# هاست کپی خور PS4
 
-- In the console browser go to: https://gamerhack.github.io/
-- Select the firmware of your console.
-- Immediately all content will be installed in the offline cache, once finished exit the browser and turn off the Internet.
-- Then go back to Access Browser and Enjoy.
+**فریمورهای پشتیبانی‌شده:** `5.05` `6.72` `7.XX` `8.XX` `9.XX` `10.XX` `11.XX` `12.XX` `13.XX`
+
+## مراحل استفاده
+
+- با مرورگر کنسول PS4 وارد آدرس زیر شوید:
+  https://myComputer46.github.io/McHost/
+
+- فریمور متناسب با نسخهٔ کنسول خود را انتخاب کنید.
+
+- محتوای موردنیاز به‌صورت خودکار در حافظهٔ آفلاین مرورگر ذخیره می‌شود. پس از اتمام فرایند، از مرورگر خارج شوید و اتصال اینترنت را قطع کنید.
+
+- دوباره وارد مرورگر کنسول شوید و از هاست استفاده کنید.
+
+---
+
+**فروشگاه مای کامپیوتر**
