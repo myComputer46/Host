@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هاست کپی خور PS4</title>
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        body {
+            direction: rtl;
+            text-align: center;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #msgs {
+            font-size: 28px;
+            margin: auto 10px;
+            padding: 30px 10px;
+            text-shadow: 0.1em 0.1em 0.2em black;
+        }
+
+        footer {
+            padding: 15px 0;
+            color: white;
+            text-align: center;
+            font-size: 16px;
+        }
+    </style>
+
+    <script>
+        var uaFull = navigator.userAgent;
+        var match = uaFull.match(/PlayStation 4[ /]\([\d.]+)/i);
+        var isPS4 = match !== null;
+        var fwVersion = isPS4 ? match[1] : "Unknown";
+        var fwNum = parseFloat(fwVersion);
+
+        function onScriptError() {
+            document.getElementById("msgs").innerHTML =
+                "محتوا پیدا نشد! داده‌های مرورگر را پاک کنید و حافظهٔ پنهان را دوباره نصب کنید.";
+        }
+
+        function showMessage(message) {
+            document.addEventListener("DOMContentLoaded", function () {
+                document.getElementById("msgs").innerHTML = message;
+            });
+        }
+
+        if (!isPS4) {
+            showMessage("این هاست فقط برای کنسول PS4 است.");
+        } else {
+            if (window.applicationCache.status == "0") {
+                if (fwNum == 5.05 || fwNum == 5.07) {
+                    window.location.replace("cache505.html");
+                } else if (fwNum >= 7.00 && fwNum <= 8.52) {
+                    window.location.replace("cache700.html");
+                } else if (fwNum >= 9.00 && fwNum <= 9.60) {
+                    window.location.replace("cache900.html");
+                } else if (fwNum >= 10.00 && fwNum <= 11.02) {
+                    window.location.replace("cachecss.html");
+                } else if (fwNum >= 11.50 && fwNum <= 13.52) {
+                    window.location.replace("cacheslopkit.html");
+                } else {
+                    showMessage(
+                        'فریمور پشتیبانی نمی‌شود: <span style="color:red;">' +
+                        fwVersion + "</span>"
+                    );
+                }
+            } else {
+                if (fwNum == 5.05 || fwNum == 5.07) {
+                    var script = document.createElement("script");
+                    script.src = "505/exploit.js";
+                    script.onerror = onScriptError;
+                    document.head.appendChild(script);
+                } else if (fwNum >= 7.00 && fwNum <= 8.52) {
+                    var script = document.createElement("script");
+                    script.type = "module";
+                    script.src = "700/alert.js";
+                    script.onerror = onScriptError;
+                    document.head.appendChild(script);
+                } else if (fwNum >= 9.00 && fwNum <= 9.60) {
+                    var script = document.createElement("script");
+                    script.type = "module";
+                    script.src = "900/alert.js";
+                    script.onerror = onScriptError;
+                    document.head.appendChild(script);
+                } else if (fwNum >= 10.00 && fwNum <= 11.02) {
+                    var script = document.createElement("script");
+                    script.src = "css/main.js";
+                    script.onerror = onScriptError;
+                    script.onload = function () {
+                        setTimeout(function () {
+                            doJb();
+                        }, 500);
+                    };
+                    document.head.appendChild(script);
+                } else if (fwNum >= 11.50 && fwNum <= 12.02) {
+                    var script = document.createElement("script");
+                    script.type = "module";
+                    script.src = "slopkit/chain_lapse.js";
+                    script.onerror = onScriptError;
+                    document.head.appendChild(script);
+                } else if (fwNum >= 12.50 && fwNum <= 13.00) {
+                    var script = document.createElement("script");
+                    script.type = "module";
+                    script.src = "slopkit/chain_poops.js";
+                    script.onerror = onScriptError;
+                    document.head.appendChild(script);
+                } else if (fwNum >= 13.02 && fwNum <= 13.52) {
+                    var script = document.createElement("script");
+                    script.type = "module";
+                    script.src = "slopkit/jb.js?v=19";
+                    script.onerror = onScriptError;
+                    document.head.appendChild(script);
+                } else {
+                    showMessage(
+                        'فریمور پشتیبانی نمی‌شود: <span style="color:red;">' +
+                        fwVersion + "</span>"
+                    );
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>هاست کپی خور PS4</h1>
+
+    <hr>
+
+    <h1 id="msgs">
+        در حال بارگذاری GoldHEN... لطفاً صبر کنید
+    </h1>
+
+    <footer>
+        فروشگاه مای کامپیوتر
+    </footer>
+
+</body>
+</html>
