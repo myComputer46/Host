@@ -6,7 +6,7 @@
 ## مراحل استفاده
 
 - با مرورگر کنسول PS4 وارد آدرس زیر شوید:
-  https://myComputer46.github.io/McHost/
+  https://myComputer46.github.io/Host/
 
 - فریمور متناسب با نسخهٔ کنسول خود را انتخاب کنید.
 
